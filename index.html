@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Selectors, Pseudo Classes, and Pseudo Elements</title>
+    <style>
+        input[type=text]{
+            border: 5px solid blue
+        }
+
+        input[type=password]{
+            border: 5px solid green
+        }
+        ul>li{
+            color:green
+        }
+        h1+p{
+            color:pink
+        }
+        p+p{
+            color:blue
+        }
+        a:hover{
+            color:red;
+        }
+        li:nth-child(2){
+            color:yellow;
+        }
+        div:not(.michael2){
+            border: 5px dashed red;
+        }
+        .mike::before{
+            content: "michael";
+        }
+        .mike1::after{
+            content: "michael";
+        }
+        .mike2::first-letter{
+             color:rgb(153, 226, 43);
+             font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!--Advanced selector-->
+    <!--Attribute selector-->
+    <input type="text" placeholder="Text Input">
+    <input type="password" placeholder="Enter Password">
+    <!--Child selector-->
+    <ul>
+        <li>Home</li>
+        <li>School</li>
+    </ul>
+    <!--Sibling Selector-->
+    <h1>Title</h1>
+    <p>This is a paaragraph</p>
+    <p>This is a paaragraph</p>
+    <!--Pseudo Classes-->
+    <!--Hover-->
+    <a href="#">Hover Over Me</a>
+    <!--Nth Child-->
+    <ul>
+        <li>School</li>
+        <li>home</li>
+    </ul>
+    <!--NOT SELECTOR-->
+    <div class="michael1">
+        Class 1
+    </div>
+    <div class="michael2">
+        Class 2
+    </div>
+    <!--Pseudo Elements-->
+    <p class="mike">This is my coding class</p>
+    <p class="mike1">My school</p>
+    <p class="mike2">My school</p>
+
+</body>
+</html>
